@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="{{path_to_root}}css/general.css" />
+    <link
+      rel="stylesheet"
+      href="{{path_to_root}}FontAwesome/css/font-awesome.css"
+    />
+
+    <link rel="shortcut icon" href="favicon.png" />
+  </head>
+  <body>
+    <div class="body">
+      <div class="toc">
+        <h2 class="book-title">{{book_title}}</h2>
+
+        {{#toc}}{{/toc}}
+      </div>
+      <div class="content">
+        <div class="nav">
+          <div class="nav-left">
+            {{#previous}}
+              <a href="{{link}}" class="nav-chapters previous">
+                <i class="fa fa-angle-left"></i>
+              </a>
+            {{/previous}}
+          </div>
+          <div class="nav-center">
+            {{chapter_title}}
+          </div>
+          <div class="nav-right">
+            {{#next}}
+              <a href="{{link}}" class="nav-chapters next">
+                <i class="fa fa-angle-right"></i>
+              </a>
+            {{/next}}
+          </div>
+          <div class="social">
+            {{#if git_repository_url}}
+              <a
+                href="{{git_repository_url}}"
+                target="_blank"
+                title="GitHub organization"
+              >
+                <i class="fa {{git_repository_icon}}"></i>
+              </a>
+            {{/if}}
+
+            {{#if git_repository_edit_url}}
+              <a
+                href="{{git_repository_edit_url}}"
+                target="_blank"
+                title="Suggest an edit"
+              >
+                <i id="git-edit-button" class="fa fa-edit"></i>
+              </a>
+            {{/if}}
+          </div>
+        </div>
+
+        {{{content}}}
+      </div>
+    </div>
+  </body>
+</html>

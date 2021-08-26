@@ -1,0 +1,10 @@
+[book]
+authors = ["anirudhb", "cjdenio"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Hack as a Service Documentation"
+
+[output.html]
+edit-url-template = "https://github.com/hack-as-a-service/docs/edit/main/{path}"
+git-repository-url = "https://github.com/hack-as-a-service"

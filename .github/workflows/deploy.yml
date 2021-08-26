@@ -1,0 +1,22 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+      - deploy-workflow
+jobs:
+  api:
+    name: Docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: mkdir -p ~/.ssh && echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+        name: Install SSH key
+      - run: echo "167.99.113.134 ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIV4nOfENhtxnlRPutfcJQhuBaiXYCaU6e93BnI8y0WVEPXLirzgHAujtT0TZ6HAgIXvj+ZMqbJRZSKoN5wCuDk=" > ~/.ssh/known_hosts
+        name: Trust SSH host
+      - run: curl -L --output - https://github.com/rust-lang/mdBook/releases/download/v0.4.12/mdbook-v0.4.12-x86_64-unknown-linux-gnu.tar.gz | tar -xzf - -C /usr/local/bin
+        name: Install mdBook
+      - run: mdbook build
+        name: Build docs
+      - run: rsync -zvr --progress ./book/ deploy@167.99.113.134:~/html/docs
+        name: Deploy docs
