@@ -19,6 +19,14 @@
   font-display: swap;
 }
 
+a {
+  color: #338eda;
+}
+
+a:visited {
+  color: #ec3750;
+}
+
 #sidebar-overlay {
   position: fixed;
   top: 0;
@@ -180,7 +188,6 @@ ol.section {
 li.chapter-item a {
   color: white;
   text-decoration: none;
-
   cursor: pointer;
 }
 
@@ -190,16 +197,13 @@ h2.book-title {
 
 .social {
   background-color: #3c4858;
-
   display: flex;
   align-items: center;
-
   justify-content: space-evenly;
-
   padding: 10px;
 }
 
-.social > * {
+.social > *, i {
   margin: 0 20px;
   color: white;
 }
@@ -223,4 +227,9 @@ h2.book-title {
 
 .nav-chapters.next {
   margin-left: auto;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
