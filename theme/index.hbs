@@ -14,56 +14,59 @@
     <link rel="shortcut icon" href="favicon.png" />
   </head>
   <body>
+    <div id="sidebar-overlay"></div>
+
     <div class="body">
       <div class="toc">
-        <h2 class="book-title">{{book_title}}</h2>
+        <div style="padding: 50px 50px 20px 50px; flex-grow: 1;overflow: auto;">
+          <div style="display: flex; align-items: center; margin-bottom: 20px;">
+            <h2 class="book-title">{{book_title}}</h2>
+            <i class="fa fa-times fa-2x" id="toc-close"></i>
+          </div>
 
-        {{#toc}}{{/toc}}
-      </div>
-      <div class="content">
-        <div class="nav">
-          <div class="nav-left">
-            {{#previous}}
-              <a href="{{link}}" class="nav-chapters previous">
-                <i class="fa fa-angle-left"></i>
-              </a>
-            {{/previous}}
-          </div>
-          <div class="nav-center">
-            {{chapter_title}}
-          </div>
-          <div class="nav-right">
-            {{#next}}
-              <a href="{{link}}" class="nav-chapters next">
-                <i class="fa fa-angle-right"></i>
-              </a>
-            {{/next}}
-          </div>
-          <div class="social">
-            {{#if git_repository_url}}
-              <a
-                href="{{git_repository_url}}"
-                target="_blank"
-                title="GitHub organization"
-              >
-                <i class="fa {{git_repository_icon}}"></i>
-              </a>
-            {{/if}}
-
-            {{#if git_repository_edit_url}}
-              <a
-                href="{{git_repository_edit_url}}"
-                target="_blank"
-                title="Suggest an edit"
-              >
-                <i id="git-edit-button" class="fa fa-edit"></i>
-              </a>
-            {{/if}}
-          </div>
+          {{#toc}}{{/toc}}
         </div>
 
+        <div class="social">
+          <a href="https://hackclub.app" title="Hack as a Service">
+            <i class="fa fa-home fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/hack-as-a-service"
+            target="_blank"
+            title="GitHub organization"
+          >
+            <i class="fa fa-github fa-lg"></i>
+          </a>
+          <a
+            href="{{git_repository_edit_url}}"
+            target="_blank"
+            title="Suggest an edit"
+          >
+            <i class="fa fa-edit fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <div class="content">
+        <i class="fa fa-bars" id="toc-toggle"></i>
+
         {{{content}}}
+
+        <div class="footer">
+          {{#previous}}
+            <a href="{{link}}" class="nav-chapters previous">
+              <i class="fa fa-angle-left fa-3x"></i>
+            </a>
+          {{/previous}}
+          {{#next}}
+            <a href="{{link}}" class="nav-chapters next">
+              <i class="fa fa-angle-right fa-3x"></i>
+            </a>
+          {{/next}}
+        </div>
       </div>
     </div>
+
+    <script src="{{path_to_root}}book.js"></script>
   </body>
 </html>
