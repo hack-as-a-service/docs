@@ -9,6 +9,14 @@
   - [Deploying from the CLI]()
 - [Why should I use HaaS?]()
 
+# Supported environments
+
+- [Node.js]()
+- [Python]()
+- [Rust]()
+- [Go]()
+- [Ruby]()
+
 # For developers
 
 - [HaaS architecture]()
