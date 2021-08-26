@@ -7,7 +7,7 @@ Hack as a Service (or HaaS) is Hack Club's own PaaS: a scalable, simple, and ine
 - Bills users in HN
 - Deployment via Git, tar.gz upload, and possibly more.
 - Has a variety of "extensions" for additional services such as Postgres and Redis
-- Project definition via Heroku buildpacks (either explicit or inferred) or Dockerfile
+- Project definition via Dockerfiles
 
 ## Requirements:
 In order for a project to be eligible for HaaS, it must conform to the following guidelines:
