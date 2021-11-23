@@ -5,9 +5,8 @@ Need to make a fix or report an issue, but not sure where to go? Here's a quick 
 ## TL;DR:
 - Something wacky with the web app? → [hack-as-a-service/frontend](https://github.com/hack-as-a-service/frontend)
 - Issue with this documentation? → [hack-as-a-service/docs](https://github.com/hack-as-a-service/docs)
-- Something else? 
-	- Issue with provisioning new apps or addons? → [hack-as-a-service/provisioner](https://github.com/hack-as-a-service/provisioner)
-	- For anything else → [hack-as-a-service/api](https://github.com/hack-as-a-service/api)
+- Issue with Caddy stuff? → [hack-as-a-service/caddy-rs](https://github.com/hack-as-a-service/caddy-rs)
+- Something else, or an issue with the API? → [hack-as-a-service/api](https://github.com/hack-as-a-service/api)
 
 We welcome all contributors, whether it's your first contribution to open source, or your thousandth. Hack as a Service is powered by a few core services that handle different responsibilties. The CLI and GitHub bot are written in Go, and our other backend services are currently undergoing a rewrite in Rust. Our documentation site uses mdBook with a custom theme to match the design of the frontend. The frontend uses Next.js, along with Chakra UI and a slightly modified version of @hackclub/theme.
 
