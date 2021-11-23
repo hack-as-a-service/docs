@@ -4,8 +4,8 @@
 For more details on each service, see our [architecture](architecture.md) page.
  - [hack-as-a-service](https://github.com/hack-as-a-service) - the organization that houses all of our repos
  - [hack-as-a-service/docs](https://github.com/hack-as-a-service/docs) - the repo for this documentation site
- - [hack-as-a-service/provisioner](https://github.com/hack-as-a-service/provisioner) - the repo for our provisioner service
- - [hack-as-a-service/api](https://github.com/hack-as-a-service/api) - the repo for our API
+ - [hack-as-a-service/api](https://github.com/hack-as-a-service/api) - the repo for our API and provisioner
+ - [hack-as-a-service/caddy-rs](https://github.com/hack-as-a-service/caddy-rs) - our library for communicating with Caddy, written in Rust
  - [hack-as-a-service/frontend](https://github.com/hack-as-a-service/frontend) - the repo for our main web frontend
 
 ## Misc.
