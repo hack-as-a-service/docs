@@ -116,7 +116,7 @@ h4 > a {
 }
 
 .toc {
-  background-color: #121217;
+  background-color: #171923;
 
   flex-basis: 400px;
   flex-grow: 0;
@@ -203,7 +203,8 @@ h2.book-title {
   padding: 10px;
 }
 
-.social > *, i {
+.social > *,
+i {
   margin: 0 20px;
   color: white;
 }
