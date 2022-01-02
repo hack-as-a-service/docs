@@ -23,7 +23,7 @@ a {
   color: #338eda;
 }
 
-a:visited {
+a:not(h1 > a):visited {
   color: #ec3750;
 }
 
