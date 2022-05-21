@@ -14,6 +14,6 @@ As mentioned, we have a fairly large refactor going on for our backend. The goal
 
 Before making any non-trivial changes, please discuss with other contributors in Slack and make a GitHub issue for tracking. Any significant layout changes to the frontend will require Figma designs before being built. 
 
-Contributors should make a fork of the repo they are contributing to, then create a new branch for a specific chaange or feature. While we don't enforce any particular commit message format, commit messages should be descriptive enough to allow anyone to understand what changes were made at a glance. If you need some help with making descriptive commit messages, we like Conventional Commits :)
+Contributors should make a fork of the repo they are contributing to, then create a new branch for a specific change or feature. While we don't enforce any particular commit message format, commit messages should be descriptive enough to allow anyone to understand what changes were made at a glance. If you need some help with making descriptive commit messages, we like Conventional Commits :)
 
 For more info on our stack, check out the [architecture](architecture.md) page.
